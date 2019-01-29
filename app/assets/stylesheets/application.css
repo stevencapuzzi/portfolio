@@ -44,6 +44,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 10%;
   }
   
   .triangle {
@@ -61,24 +62,6 @@
     background-position: top;
     clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
     -webkit-clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
-    margin: 10px;
-  }
-
-  .inverseTriangle {
-    animation: moveInRight 1s ease-out;
-    animation-duration: 5s;
-    position: relative;
-    height: 90vh;
-    width: 90vh;
-    background-image: linear-gradient(
-      rgba(186, 246, 250, 0.8), 
-      rgba(62, 178, 240, 0.8), 
-      rgba(0, 195, 255, 0.8)),
-      url('http://stevencapuzzi.com/assets/front/home/images/banner.jpg');
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(100% 0, 50% 0, 50% 100%, 0% 50%);
-    -webkit-clip-path: polygon(100% 0, 100% 0, 50% 50%, 0% 50%);
     margin: 10px;
   }
   
@@ -109,6 +92,22 @@
     text-align: center;
     animation: moveInRight 1s ease-out, floatingFox 4s 1s infinite;
     
+  }
+
+  .floating {
+    display: block;
+    animation: moveInRight 1s ease-out, floatingFox 4s 1s infinite;
+    animation-delay: 5s;
+    padding-right: 55%;
+    padding-top: 20%;
+    
+  }
+  
+  .logo {
+    transform: rotate(-45deg);
+    width: 100px;
+    /* display: block;
+    animation: moveInRight 1s ease-out, floatingFox 4s 1s infinite; */
   }
   
   @media screen and (max-width: 550px) {
@@ -230,6 +229,7 @@
           transform: rotate(45deg);
   -webkit-transition: background-color .3s;
           transition: background-color .3s;
+          z-index: 10;
 }
 /** hover effect **/
 .tr a:hover {
@@ -259,6 +259,7 @@
           transform: rotate(45deg);
   -webkit-transition: background-color .3s;
           transition: background-color .3s;
+          z-index: 10;
 }
 /** hover effect **/
 .tr2 a:hover {
@@ -288,11 +289,44 @@
           transform: rotate(45deg);
   -webkit-transition: background-color .3s;
           transition: background-color .3s;
+          z-index: 10;
 }
 
 
 /** hover effect **/
 .tr3 a:hover {
+  background: rgba(255, 165, 0, 0.7);
+}
+
+/* ----- */
+.tr4 {
+    width: 20%;
+    padding-bottom:40%; /* = width / sqrt(2) */
+    position: relative;
+    overflow: hidden;
+    animation: moveInRight 1s ease-out;
+    animation-duration: 5s;
+  }
+  
+.tr4 a {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('http://stevencapuzzi.com/assets/front/home/images/banner.jpg');
+  -webkit-transform-origin: left bottom;
+      -ms-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: background-color .3s;
+          transition: background-color .3s;
+          z-index: 10;
+}
+
+
+/** hover effect **/
+.tr4 a:hover {
   background: rgba(255, 165, 0, 0.7);
 }
 /* FOLLOWING JUST FOR THE DEMO */
@@ -301,6 +335,7 @@ body {display: table-cell;vertical-align: middle;text-align: center;color: #fff;
 .tr {margin: 10% -2% auto 0;}
 .tr2 {margin: 10% -24% auto 0}
 .tr3 {margin: 20% -10% auto -24%}
+.tr4 {margin: 5% -20% auto -24%}
 strong {color: #FFA500;}
 h1 {font-size: 2em;padding-bottom: 0;margin-bottom: 0;}
 body {background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 1%, rgba(12, 12, 12, 0.91) 61%, rgba(19, 19, 19, 0.91) 100%);background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0.45)), color-stop(1%, rgba(0, 0, 0, 0.45)), color-stop(61%, rgba(12, 12, 12, 0.91)), color-stop(100%, rgba(19, 19, 19, 0.91)));background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 1%, rgba(12, 12, 12, 0.91) 61%, rgba(19, 19, 19, 0.91) 100%);background: -o-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 1%, rgba(12, 12, 12, 0.91) 61%, rgba(19, 19, 19, 0.91) 100%);background: -ms-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 1%, rgba(12, 12, 12, 0.91) 61%, rgba(19, 19, 19, 0.91) 100%);background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 1%, rgba(12, 12, 12, 0.91) 61%, rgba(19, 19, 19, 0.91) 100%);filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#73000000', endColorstr='#e8131313', GradientType=1);}
