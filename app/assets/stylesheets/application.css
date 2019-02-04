@@ -90,13 +90,13 @@
     display: block;
     font-size: 50px;
     text-align: center;
-    animation: moveInRight 1s ease-out, floatingFox 4s 1s infinite;
+    animation: moveInFlip 1s ease-out, floatingFox 4s 1s infinite;
     
   }
 
   .floating {
     display: block;
-    animation: moveInRight 1s ease-out, floatingFox 4s 1s infinite;
+    animation: moveInFlip 1s ease-out, floatingFox 4s 1s infinite;
     animation-delay: 5s;
     padding-right: 55%;
     padding-top: 20%;
@@ -137,10 +137,22 @@
     }
   }
   
-  @keyframes moveInRight {
+  @keyframes moveInFlip {
     0% {
       opacity: 0;
       transform: rotateX(180deg);
+    }
+    
+    100% {
+      opacity: 1;
+      transform: translate(0px);
+    }
+  }
+
+  @keyframes reverseFlip {
+    0% {
+      opacity: 0;
+      transform: rotateX(240deg);
     }
     
     100% {
@@ -212,7 +224,7 @@
     padding-bottom: 28.2842712474619%; /* = width / sqrt(2) */
     position: relative;
     overflow: hidden;
-    animation: moveInRight 1s ease-out;
+    animation: moveInFlip 1s ease-out;
     animation-duration: 5s;
   }
   
@@ -272,7 +284,7 @@
     padding-bottom: 28.2842712474619%; /* = width / sqrt(2) */
     position: relative;
     overflow: hidden;
-    animation: moveInRight 1s ease-out;
+    animation: moveInFlip 1s ease-out;
     animation-duration: 5s;
   }
   
@@ -304,7 +316,7 @@
     padding-bottom:40%; /* = width / sqrt(2) */
     position: relative;
     overflow: hidden;
-    animation: moveInRight 1s ease-out;
+    animation: reverseFlip 1s ease-out;
     animation-duration: 5s;
   }
   
