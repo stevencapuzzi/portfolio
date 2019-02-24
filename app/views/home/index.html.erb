@@ -1,7 +1,27 @@
-  <div class="container">
-   <div class="tr4"><a href="#">Matthew Swimming</a></div>
-   <div class="tr2"><a href="#">Steven Scalisi</a></div>
-   <div class="tr"><a href="#"><div class="floating"><img class="logo" src="http://stevencapuzzi.com/assets/front/laberinto/images/source/logo_home.png" /></div></a></div>
-    <div class="tr3"><a href="#">Mathew Alton</a></div>
-  
+  <!-- swipe effect -->
+<div id="curtains">
+  <div class="curtain left-curtain"></div>
+  <div class="curtain right-curtain"></div>
 </div>
+
+<div class="container">
+   <div class="tr4"><a class="tr4-light" id="triangle-4" href="#">Matthew Swimming</a></div>
+   <div class="tr2"><a class="tr2-light" id="triangle-2"  href="#">Steven Scalisi</a></div>
+   <div class="tr"><a class="tr-light" id="triangle"  href="#"><div class="floating"><img class="logo" src="http://stevencapuzzi.com/assets/front/laberinto/images/source/logo_home.png" /></div></a></div>
+   <div class="tr3"><a class="tr3-light" id="triangle-3" href="#">Mathew Alton</a></div>
+</div>
+<script>
+const body = document.querySelector("body");
+body.addEventListener("click", toggleColor);
+const tr4 = document.getElementById("triangle-4");
+
+// toggle class on <body>
+function toggleColor(e) {
+  body.classList.toggle("dark");
+  if ( tr4.getAttribute("class") == "tr4-light")
+      tr4.setAttribute("class", "tr4-dark");
+    else
+      tr4.setAttribute("class", "tr4-light");
+
+}
+</script>

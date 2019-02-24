@@ -47,24 +47,6 @@
     margin-left: 10%;
   }
   
-  .triangle {
-    animation: moveInLeft 1s ease-out;
-    animation-duration: 5s;
-    position: relative;
-    height: 90vh;
-    width: 90vh;
-    background-image: linear-gradient(
-      rgba(186, 246, 250, 0.8), 
-      rgba(62, 178, 240, 0.8), 
-      rgba(0, 195, 255, 0.8)),
-      url('http://stevencapuzzi.com/assets/front/home/images/banner.jpg');
-    background-size: cover;
-    background-position: top;
-    clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
-    -webkit-clip-path: polygon(50% 0, 50% 0, 100% 100%, 0% 100%);
-    margin: 10px;
-  }
-  
   .text-container {
     position: absolute;
     top: 50%;
@@ -228,11 +210,19 @@
     animation-duration: 5s;
   }
   
-.tr a {
+.tr-light {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-image: url('http://stevencapuzzi.com/assets/front/home/images/banner.jpg');
+  background-image: linear-gradient(
+    to right, 
+    #6b26d3, 
+    #1d2fd3,
+    #10cee8,
+    #1effe4
+   
+
+  );
   -webkit-transform-origin: 0 100%;
       -ms-transform-origin: 0 100%;
           transform-origin: 0 100%;
@@ -244,7 +234,7 @@
           z-index: 10;
 }
 /** hover effect **/
-.tr a:hover {
+.tr-light:hover {
   background: rgba(255, 165, 0, 0.7);
 }
 
@@ -258,11 +248,15 @@
     animation-duration: 5s;
   }
   
-.tr2 a {
+.tr2-light {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-image: url('http://stevencapuzzi.com/assets/front/home/images/banner.jpg');
+  background-image: linear-gradient(
+    to left, 
+    #6b26d3, 
+    #d22570
+  );
   -webkit-transform-origin: right top;
       -ms-transform-origin: right top;
           transform-origin: right top;
@@ -274,7 +268,7 @@
           z-index: 10;
 }
 /** hover effect **/
-.tr2 a:hover {
+.tr2-light:hover {
   background: rgba(255, 165, 0, 0.7);
 }
 
@@ -288,11 +282,16 @@
     animation-duration: 5s;
   }
   
-.tr3 a {
+.tr3-light {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-image: url('http://stevencapuzzi.com/assets/front/home/images/banner.jpg');
+  background-image: linear-gradient(
+    to right, 
+    #1d2fd3,
+    #10cee8,
+    #f7ff1e
+  );
   -webkit-transform-origin: right bottom;
       -ms-transform-origin: right bottom;
           transform-origin: right bottom;
@@ -306,8 +305,13 @@
 
 
 /** hover effect **/
-.tr3 a:hover {
-  background: rgba(255, 165, 0, 0.7);
+.tr3-light:hover {
+  background-image:linear-gradient(
+    to right, 
+    #1effe4,
+    #f7ff1e
+    
+  );
 }
 
 /* ----- */
@@ -320,11 +324,17 @@
     animation-duration: 5s;
   }
   
-.tr4 a {
+.tr4-light {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-image: url('http://stevencapuzzi.com/assets/front/home/images/banner.jpg');
+  background-image:
+  linear-gradient(
+    to right, 
+    red, 
+    #f06d06, 
+    #fc14ab
+  );
   -webkit-transform-origin: left bottom;
       -ms-transform-origin: left bottom;
           transform-origin: left bottom;
@@ -338,8 +348,14 @@
 
 
 /** hover effect **/
-.tr4 a:hover {
-  background: rgba(255, 165, 0, 0.7);
+.tr4-light:hover {
+  background-image:
+  linear-gradient(
+    to right, 
+    #fc14ab,
+    red, 
+    #f06d06
+  );
 }
 /* FOLLOWING JUST FOR THE DEMO */
 html {display: table; width: 100%; height: 100%;}
@@ -350,4 +366,87 @@ body {display: table-cell;vertical-align: middle;text-align: center;color: #fff;
 .tr4 {margin: 5% -20% auto -24%}
 strong {color: #FFA500;}
 h1 {font-size: 2em;padding-bottom: 0;margin-bottom: 0;}
-body {background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 1%, rgba(12, 12, 12, 0.91) 61%, rgba(19, 19, 19, 0.91) 100%);background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0.45)), color-stop(1%, rgba(0, 0, 0, 0.45)), color-stop(61%, rgba(12, 12, 12, 0.91)), color-stop(100%, rgba(19, 19, 19, 0.91)));background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 1%, rgba(12, 12, 12, 0.91) 61%, rgba(19, 19, 19, 0.91) 100%);background: -o-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 1%, rgba(12, 12, 12, 0.91) 61%, rgba(19, 19, 19, 0.91) 100%);background: -ms-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 1%, rgba(12, 12, 12, 0.91) 61%, rgba(19, 19, 19, 0.91) 100%);background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.45) 1%, rgba(12, 12, 12, 0.91) 61%, rgba(19, 19, 19, 0.91) 100%);filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#73000000', endColorstr='#e8131313', GradientType=1);}
+body #curtains {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 4;
+  overflow: hidden;
+}
+body .curtain {
+  position: absolute;
+  height: 100%;
+  width: 200%;
+  background: #1d1d1d;
+  transition: left 500ms ease, right 500ms ease;
+}
+body .curtain.left-curtain {
+  transform: skew(-43deg);
+  left: -300%;
+}
+body .curtain.right-curtain {
+  transform: skew(-43deg);
+  right: -300%;
+}
+body::after {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 10;
+  padding: 8px 12px;
+  background: rgba(29, 29, 29, 0.75);
+  border-radius: 30px;
+  content: "Go to Dark Theme";
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  transition: color 650ms ease, background 650ms ease;
+  transition-delay: 100ms;
+  color: #f6f6f6;
+  opacity: 0.75;
+}
+body.dark .curtain.left-curtain {
+  left: -150%;
+}
+body.dark .curtain.right-curtain {
+  right: calc(-150% + 1px);
+}
+body.dark .top {
+  opacity: 0;
+}
+body.dark .bottom {
+  opacity: 1;
+}
+body.dark::after {
+  content: "Go to Light Theme";
+  color: #1d1d1d;
+  background: rgba(246, 246, 246, 0.7);
+}
+.tr4-dark {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image:
+  linear-gradient(
+    to right, 
+    green, 
+    blue, 
+    #fc14ab
+  );
+  -webkit-transform-origin: left bottom;
+      -ms-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: background-color .3s;
+          transition: background-color .3s;
+          z-index: 10;
+}
+
+
